@@ -1,4 +1,4 @@
-# Monovus Solutions Website
+# Monovus Solutions — monovus.solutions
 
 Public website for [monovus.solutions](https://monovus.solutions) — the Monovus consulting brand.
 
