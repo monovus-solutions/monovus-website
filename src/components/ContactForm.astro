@@ -1,0 +1,78 @@
+---
+// Formspree form endpoint — replace {form_id} with your actual Formspree form ID
+const formAction = 'https://formspree.io/f/{form_id}';
+---
+
+<form
+  action={formAction}
+  method="POST"
+  class="space-y-6"
+  id="contact-form"
+>
+  <!-- Honeypot field for spam prevention -->
+  <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div>
+      <label for="name" class="block text-white/80 text-sm font-medium mb-2">
+        Name <span class="text-electric-cyan">*</span>
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Your name"
+        class="w-full bg-obsidian-light border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-colors"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-white/80 text-sm font-medium mb-2">
+        Email <span class="text-electric-cyan">*</span>
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="you@company.com"
+        class="w-full bg-obsidian-light border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-colors"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="subject" class="block text-white/80 text-sm font-medium mb-2">
+      Subject
+    </label>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      placeholder="How can we help?"
+      class="w-full bg-obsidian-light border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-colors"
+    />
+  </div>
+
+  <div>
+    <label for="message" class="block text-white/80 text-sm font-medium mb-2">
+      Message <span class="text-electric-cyan">*</span>
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="5"
+      placeholder="Tell us about your project or challenge..."
+      class="w-full bg-obsidian-light border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-colors resize-vertical"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full sm:w-auto bg-electric-cyan text-obsidian px-8 py-3 rounded-lg font-semibold hover:bg-electric-cyan-dark transition-colors focus:outline-none focus:ring-2 focus:ring-electric-cyan focus:ring-offset-2 focus:ring-offset-obsidian"
+  >
+    Send Message
+  </button>
+</form>

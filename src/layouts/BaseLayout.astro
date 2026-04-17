@@ -1,0 +1,28 @@
+---
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+}
+
+const { title, description, ogImage, ogType } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <SEO title={title} description={description} ogImage={ogImage} ogType={ogType} />
+  </head>
+  <body class="bg-obsidian text-white font-sans antialiased min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1 pt-16">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

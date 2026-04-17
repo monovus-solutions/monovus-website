@@ -1,0 +1,71 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-obsidian border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <a href="/" class="inline-block mb-4">
+          <span class="text-electric-cyan font-mono font-bold text-xl">monovus</span>
+          <span class="text-white/60 font-mono text-sm">.solutions</span>
+        </a>
+        <p class="text-white/50 text-sm leading-relaxed">
+          Infrastructure. Intelligence. Innovation.
+        </p>
+        <p class="text-white/40 text-sm mt-2">
+          Technology consulting for the modern enterprise.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Navigation</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">Home</a></li>
+          <li><a href="/services" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">Services</a></li>
+          <li><a href="/about" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">About</a></li>
+          <li><a href="/contact" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Legal -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contact & Legal</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="mailto:hello@monovus.solutions" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">
+              hello@monovus.solutions
+            </a>
+          </li>
+          <li>
+            <a href="https://status.monovus.solutions" target="_blank" rel="noopener noreferrer" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">
+              System Status ↗
+            </a>
+          </li>
+          <li>
+            <a href="/legal/privacy" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/legal/terms" class="text-white/50 hover:text-electric-cyan text-sm transition-colors">
+              Terms of Service
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-sm">
+        &copy; {currentYear} Monovus Solutions. All rights reserved.
+      </p>
+      <p class="text-white/30 text-xs font-mono">
+        Built with Astro &middot; Deployed on Cloudflare
+      </p>
+    </div>
+  </div>
+</footer>

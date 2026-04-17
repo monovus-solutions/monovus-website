@@ -1,0 +1,107 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-obsidian/95 backdrop-blur-sm border-b border-white/10">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group" aria-label="Monovus Solutions home">
+        <span class="text-electric-cyan font-mono font-bold text-xl tracking-tight group-hover:text-electric-cyan-dark transition-colors">
+          monovus
+        </span>
+        <span class="text-white/60 font-mono text-sm hidden sm:inline">.solutions</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'text-sm font-medium transition-colors',
+              isActive(link.href)
+                ? 'text-electric-cyan'
+                : 'text-white/70 hover:text-white',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="bg-electric-cyan text-obsidian px-4 py-2 rounded text-sm font-semibold hover:bg-electric-cyan-dark transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-white/70 hover:text-white p-2"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-2 pt-2 border-t border-white/10">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'px-3 py-2 rounded text-sm font-medium transition-colors',
+              isActive(link.href)
+                ? 'text-electric-cyan bg-white/5'
+                : 'text-white/70 hover:text-white hover:bg-white/5',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="bg-electric-cyan text-obsidian px-3 py-2 rounded text-sm font-semibold text-center hover:bg-electric-cyan-dark transition-colors mt-2"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    hamburger?.classList.toggle('hidden', isOpen);
+    closeIcon?.classList.toggle('hidden', !isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>
