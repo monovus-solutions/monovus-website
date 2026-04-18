@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const signals = [
+  {
+    title: "Agents that own their context",
+    body: "The next wave of intelligent systems won't wait for instructions. They'll maintain their own state, track their own intent, and act on what they know without being told what to remember. Context isn't a prompt window — it's the substrate of autonomy. The systems that matter next will carry their understanding forward, not start from zero every time someone opens a tab."
+  },
+  {
+    title: "Infrastructure as intent",
+    body: "We're still writing infrastructure like it's 2015 — declaring resources, wiring dependencies, hoping the graph resolves. The shift is toward infrastructure that configures itself based on desired outcomes. You describe what should exist. The system figures out how. Not infrastructure as code. Infrastructure as intent."
+  },
+  {
+    title: "Intelligence at the edge",
+    body: "Centralized inference is a bottleneck dressed up as a service. The interesting work pushes intelligence to where decisions actually happen — on-device, on-premise, at the network boundary. Latency isn't just a performance metric. It's the difference between a system that reacts and a system that's already acted."
+  },
+  {
+    title: "The post-dashboard era",
+    body: "Dashboards are a confession that your system can't act on its own. The next generation of operational tooling won't display metrics for humans to interpret — it will resolve incidents, rebalance loads, and surface only what requires genuine human judgment. Monitoring becomes intervention. Observability becomes autonomy."
+  },
+  {
+    title: "Autonomy as a primitive",
+    body: "Most systems bolt autonomy on as a feature. The ones that endure build it into the foundation. Autonomy isn't a capability you add — it's an architectural decision you make at the beginning. Self-healing infrastructure, self-organizing agents, self-correcting pipelines. The primitive isn't the function. It's the ability to operate without asking."
+  }
+];
+---
+
+<BaseLayout
+  title="Signal"
+  description="What we're thinking about."
+>
+  <section class="py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-mono text-electric-cyan text-sm tracking-widest uppercase mb-20">Signal</h1>
+
+      <div class="space-y-0">
+        {signals.map((signal, i) => (
+          <div class:list={["pb-16 mb-16", i < signals.length - 1 && "border-b border-white/5"]}>
+            <h2 class="font-mono text-electric-cyan text-lg sm:text-xl mb-6">{signal.title}</h2>
+            <p class="text-white/60 leading-relaxed text-base">{signal.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

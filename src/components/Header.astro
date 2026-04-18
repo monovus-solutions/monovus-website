@@ -1,28 +1,36 @@
 ---
+interface Props {
+  isLanding?: boolean;
+}
+
+const { isLanding = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
+  { href: '/signal', label: 'Signal' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 
 function isActive(href: string): boolean {
-  if (href === '/') return currentPath === '/';
   return currentPath.startsWith(href);
 }
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-obsidian/95 backdrop-blur-sm border-b border-white/10">
+<header
+  id="site-header"
+  class:list={[
+    'fixed top-0 left-0 right-0 z-50 bg-obsidian/95 backdrop-blur-sm border-b border-white/10 transition-all duration-300',
+    isLanding ? 'nav-hidden' : 'nav-visible',
+  ]}
+>
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group" aria-label="Monovus Solutions home">
+      <!-- Wordmark -->
+      <a href="/" class="flex items-center group" aria-label="Monovus home">
         <span class="text-electric-cyan font-mono font-bold text-xl tracking-tight group-hover:text-electric-cyan-dark transition-colors">
           monovus
         </span>
-        <span class="text-white/60 font-mono text-sm hidden sm:inline">.solutions</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -40,12 +48,6 @@ function isActive(href: string): boolean {
             {link.label}
           </a>
         ))}
-        <a
-          href="/contact"
-          class="bg-electric-cyan text-obsidian px-4 py-2 rounded text-sm font-semibold hover:bg-electric-cyan-dark transition-colors"
-        >
-          Get in Touch
-        </a>
       </div>
 
       <!-- Mobile Hamburger -->
@@ -81,18 +83,13 @@ function isActive(href: string): boolean {
             {link.label}
           </a>
         ))}
-        <a
-          href="/contact"
-          class="bg-electric-cyan text-obsidian px-3 py-2 rounded text-sm font-semibold text-center hover:bg-electric-cyan-dark transition-colors mt-2"
-        >
-          Get in Touch
-        </a>
       </div>
     </div>
   </nav>
 </header>
 
 <script>
+  // Mobile menu toggle
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   const hamburger = document.getElementById('hamburger-icon');
@@ -104,4 +101,24 @@ function isActive(href: string): boolean {
     closeIcon?.classList.toggle('hidden', !isOpen);
     btn.setAttribute('aria-expanded', String(isOpen));
   });
+
+  // Scroll-reveal navigation for landing page
+  const header = document.getElementById('site-header');
+  const sentinel = document.getElementById('hero-sentinel');
+
+  if (header && sentinel) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          header.classList.remove('nav-visible');
+          header.classList.add('nav-hidden');
+        } else {
+          header.classList.remove('nav-hidden');
+          header.classList.add('nav-visible');
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(sentinel);
+  }
 </script>

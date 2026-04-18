@@ -1,97 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ContactForm from '../components/ContactForm.astro';
 ---
 
 <BaseLayout
   title="Contact"
-  description="Start a conversation. Technology consulting, AI systems, or infrastructure engineering — if the problem is interesting, we want to hear about it."
+  description="Get in touch."
 >
-  <!-- Page Header -->
-  <section class="py-20 sm:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <p class="text-electric-cyan font-mono text-sm tracking-widest uppercase mb-4">Contact</p>
-        <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-          Let's talk.
-        </h1>
-        <p class="text-lg text-white/60 leading-relaxed">
-          Have a project in mind, a question, or just want to explore what's possible?
-          We typically respond within one business day.
-        </p>
-      </div>
-    </div>
-  </section>
+  <section class="py-20 sm:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-mono text-electric-cyan text-sm tracking-widest uppercase mb-16">Contact</h1>
 
-  <!-- Contact Content -->
-  <section class="pb-20 sm:pb-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <!-- Contact Form -->
-        <div class="lg:col-span-2">
-          <div class="bg-obsidian-light border border-white/10 rounded-2xl p-8 sm:p-10">
-            <h2 class="text-2xl font-bold text-white mb-6">Send a Message</h2>
-            <ContactForm />
-          </div>
-        </div>
+      <p class="text-white/60 text-lg mb-8">If this resonates, reach out.</p>
 
-        <!-- Contact Info Sidebar -->
-        <div class="space-y-8">
-          <!-- Email -->
-          <div class="bg-obsidian-light border border-white/10 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 bg-electric-cyan/10 rounded-lg flex items-center justify-center">
-                <svg class="w-5 h-5 text-electric-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 class="text-white font-semibold">Email</h3>
-            </div>
-            <a
-              href="mailto:hello@monovus.solutions"
-              class="text-electric-cyan hover:text-electric-cyan-dark text-sm transition-colors"
-            >
-              hello@monovus.solutions
-            </a>
-            <p class="text-white/40 text-xs mt-1">We respond within 1 business day</p>
-          </div>
-
-          <!-- Availability -->
-          <div class="bg-obsidian-light border border-white/10 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 bg-electric-cyan/10 rounded-lg flex items-center justify-center">
-                <svg class="w-5 h-5 text-electric-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 class="text-white font-semibold">Availability</h3>
-            </div>
-            <p class="text-white/60 text-sm">Currently accepting new engagements</p>
-            <p class="text-white/40 text-xs mt-1">Limited capacity — serious inquiries only</p>
-          </div>
-
-          <!-- Status -->
-          <div class="bg-obsidian-light border border-white/10 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 bg-electric-cyan/10 rounded-lg flex items-center justify-center">
-                <svg class="w-5 h-5 text-electric-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 class="text-white font-semibold">System Status</h3>
-            </div>
-            <a
-              href="https://status.monovus.solutions"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-electric-cyan hover:text-electric-cyan-dark text-sm transition-colors"
-            >
-              status.monovus.solutions ↗
-            </a>
-            <p class="text-white/40 text-xs mt-1">Real-time infrastructure health</p>
-          </div>
-        </div>
-      </div>
+      <a
+        href="mailto:hello@monovus.solutions"
+        class="text-electric-cyan hover:text-electric-cyan-dark font-mono text-lg sm:text-xl transition-colors"
+      >
+        hello@monovus.solutions
+      </a>
     </div>
   </section>
 </BaseLayout>

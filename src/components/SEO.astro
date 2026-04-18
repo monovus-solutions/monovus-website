@@ -10,12 +10,12 @@ interface Props {
 const {
   title,
   description,
-  ogImage = '/og-image.png',
+  ogImage = '/og-image.svg',
   ogType = 'website',
   canonicalURL = Astro.url.href,
 } = Astro.props;
 
-const siteName = 'Monovus Solutions';
+const siteName = 'Monovus';
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 ---
 

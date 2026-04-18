@@ -4,166 +4,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="About"
-  description="The philosophy behind Monovus. A singular focus on building technology that works — quietly, reliably, and at scale."
+  description="What Monovus is."
 >
-  <!-- Page Header -->
-  <section class="py-20 sm:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <p class="text-electric-cyan font-mono text-sm tracking-widest uppercase mb-4">About</p>
-        <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-          Quiet precision.<br />Relentless execution.
-        </h1>
-        <p class="text-lg text-white/60 leading-relaxed">
-          Monovus exists because too much technology is built for show and not enough
-          is built to last. We took a different path.
-        </p>
-      </div>
-    </div>
-  </section>
+  <section class="py-20 sm:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-mono text-electric-cyan text-sm tracking-widest uppercase mb-16">About</h1>
 
-  <!-- Philosophy Section -->
-  <section class="pb-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-obsidian-light border border-white/10 rounded-2xl p-8 sm:p-12">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <!-- Philosophy -->
-          <div class="lg:col-span-2">
-            <h2 class="text-3xl font-bold text-white mb-6">The Monovus Philosophy</h2>
-            <p class="text-electric-cyan font-mono text-sm mb-6">Singular focus. No noise.</p>
-
-            <div class="space-y-4 text-white/60 leading-relaxed">
-              <p>
-                We believe the best technology disappears. It doesn't demand attention —
-                it earns trust by working flawlessly in the background. Every system we
-                build is measured by one standard: does it work at 3 AM with nobody watching?
-              </p>
-              <p>
-                Our approach is rooted in deep technical expertise across cloud platforms,
-                DevOps practices, AI integration, and systems architecture. We've seen what
-                breaks at scale and what survives. That experience shapes everything we build.
-              </p>
-              <p>
-                The name "Monovus" reflects a singular focus: delivering solutions that
-                are practical, reliable, and built to last. No unnecessary complexity.
-                No technology for technology's sake. Just systems that work.
-              </p>
-            </div>
-          </div>
-
-          <!-- Focus Areas -->
-          <div>
-            <h3 class="text-white font-semibold mb-6">Core Expertise</h3>
-            <div class="space-y-4">
-              <div>
-                <p class="text-white/80 text-sm font-medium mb-1">Cloud & Infrastructure</p>
-                <div class="w-full bg-white/10 rounded-full h-1.5">
-                  <div class="bg-electric-cyan h-1.5 rounded-full" style="width: 95%"></div>
-                </div>
-              </div>
-              <div>
-                <p class="text-white/80 text-sm font-medium mb-1">DevOps & Automation</p>
-                <div class="w-full bg-white/10 rounded-full h-1.5">
-                  <div class="bg-electric-cyan h-1.5 rounded-full" style="width: 90%"></div>
-                </div>
-              </div>
-              <div>
-                <p class="text-white/80 text-sm font-medium mb-1">AI & Machine Learning</p>
-                <div class="w-full bg-white/10 rounded-full h-1.5">
-                  <div class="bg-electric-cyan h-1.5 rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
-              <div>
-                <p class="text-white/80 text-sm font-medium mb-1">Security & Zero Trust</p>
-                <div class="w-full bg-white/10 rounded-full h-1.5">
-                  <div class="bg-electric-cyan h-1.5 rounded-full" style="width: 88%"></div>
-                </div>
-              </div>
-              <div>
-                <p class="text-white/80 text-sm font-medium mb-1">Monitoring & Observability</p>
-                <div class="w-full bg-white/10 rounded-full h-1.5">
-                  <div class="bg-electric-cyan h-1.5 rounded-full" style="width: 92%"></div>
-                </div>
-              </div>
-            </div>
-
-            <h3 class="text-white font-semibold mt-8 mb-4">Technologies</h3>
-            <div class="flex flex-wrap gap-2">
-              {['Docker', 'Kubernetes', 'Terraform', 'Grafana', 'Cloudflare', 'AWS', 'Linux', 'Python', 'TypeScript', 'n8n'].map((tech) => (
-                <span class="bg-white/5 border border-white/10 text-white/60 text-xs px-3 py-1 rounded-full">
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Approach -->
-  <section class="pb-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <h2 class="text-3xl font-bold text-white mb-6">Our Approach</h2>
-        <div class="space-y-4 text-white/60 leading-relaxed">
-          <p>
-            Too many businesses struggle with technology that's over-engineered,
-            under-maintained, or simply the wrong fit. The industry often sells
-            complexity when what's needed is clarity.
-          </p>
-          <p>
-            We take a different approach. Every engagement starts with understanding the
-            problem — not selling a solution. We bring the same rigor to a small automation
-            project as we do to a full infrastructure overhaul, because the details matter
-            at every scale.
-          </p>
-          <p>
-            Monovus operates as a lean, focused entity. No layers of management, no
-            junior consultants learning on your dime. When you work with us, you work
-            directly with senior expertise.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Values -->
-  <section class="pb-20 sm:pb-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-white mb-12 text-center">Principles</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-12 h-12 bg-electric-cyan/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span class="text-electric-cyan font-mono font-bold text-lg">01</span>
-          </div>
-          <h3 class="text-white font-semibold mb-2">Pragmatic</h3>
-          <p class="text-white/50 text-sm">
-            The simplest solution that solves the problem. No gold-plating,
-            no resume-driven development.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-12 h-12 bg-electric-cyan/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span class="text-electric-cyan font-mono font-bold text-lg">02</span>
-          </div>
-          <h3 class="text-white font-semibold mb-2">Transparent</h3>
-          <p class="text-white/50 text-sm">
-            Clear communication, honest timelines, no surprises. If something
-            isn't working, you'll hear about it early.
-          </p>
-        </div>
-        <div class="text-center">
-          <div class="w-12 h-12 bg-electric-cyan/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span class="text-electric-cyan font-mono font-bold text-lg">03</span>
-          </div>
-          <h3 class="text-white font-semibold mb-2">Reliable</h3>
-          <p class="text-white/50 text-sm">
-            We build systems that work at 3 AM without anyone watching. That same
-            reliability applies to how we operate.
-          </p>
-        </div>
-      </div>
+      <p class="text-white/60 text-lg sm:text-xl leading-relaxed">
+        Monovus builds systems that operate with intent. We exist at the intersection
+        of infrastructure, intelligence, and autonomy — engineering the substrates that
+        future systems will run on. Not a consultancy. Not a product company. A quiet,
+        deliberate effort to build what comes next.
+      </p>
     </div>
   </section>
 </BaseLayout>
