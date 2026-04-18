@@ -1,6 +1,6 @@
 # Deployment Guide — Monovus Website
 
-## Task 47: Push to GitHub and Set Up Cloudflare Pages
+## Push to GitHub and Set Up Cloudflare Pages
 
 ### Push to GitHub
 
@@ -31,7 +31,7 @@ git push -u origin main
 
 ---
 
-## Task 48: Configure Custom Domain for Cloudflare Pages
+## Configure Custom Domain for Cloudflare Pages
 
 1. In Cloudflare Pages project settings, go to **Custom domains**
 2. Click **Set up a custom domain**
@@ -43,7 +43,7 @@ git push -u origin main
 
 ---
 
-## Task 49: Create DNS Records for Website
+## Create DNS Records for Website
 
 Cloudflare Pages auto-creates these records when you add custom domains.
 Verify the following exist in the DNS zone:
@@ -69,7 +69,7 @@ curl -I https://www.monovus.solutions
 
 ---
 
-## Task 50: Validate Website Deployment
+## Validate Website Deployment
 
 ### Checklist
 
@@ -78,7 +78,7 @@ curl -I https://www.monovus.solutions
 - [ ] All pages load correctly:
   - [ ] `/` — Home page with hero, services, CTA
   - [ ] `/services` — Three service cards
-  - [ ] `/about` — Alex Shaw bio
+  - [ ] `/about` — Philosophy and principles
   - [ ] `/contact` — Contact form renders
   - [ ] `/legal/privacy` — Privacy policy
   - [ ] `/legal/terms` — Terms of service

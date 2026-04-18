@@ -1,6 +1,6 @@
 # Monovus Solutions — monovus.solutions
 
-Public website for [monovus.solutions](https://monovus.solutions) — the Monovus consulting brand.
+Public website for [monovus.solutions](https://monovus.solutions).
 
 ## Stack
 
@@ -15,7 +15,7 @@ Public website for [monovus.solutions](https://monovus.solutions) — the Monovu
 |-------|-------------|
 | `/` | Home — hero, services overview, CTA |
 | `/services` | Service lines — consulting, AI, infrastructure |
-| `/about` | Alex Shaw bio, Monovus origin story |
+| `/about` | Philosophy, approach, principles |
 | `/contact` | Contact form + email info |
 | `/legal/privacy` | Privacy policy |
 | `/legal/terms` | Terms of service |
